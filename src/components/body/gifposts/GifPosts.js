@@ -12,9 +12,6 @@ function GifPosts() {
         let isMounted = true;
         
         if (isMounted) {
-            /*db.collection("posts").where("gif", "==", true).orderBy('timestamp', 'desc').onSnapshot((snapshot) => 
-            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data()})))
-            );*/
             fetchPosts()
         }
 
@@ -25,7 +22,6 @@ function GifPosts() {
    
     async function fetchPosts() {
         const res = await axios.get('/api/gif/posts')
-        console.log(res.data)
         setPosts(res.data.data)
     }
 

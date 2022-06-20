@@ -14,9 +14,6 @@ function GifPosts() {
         let isMounted = true;
         
         if (isMounted) {
-           /* db.collection("posts").where("userId", "!=", user.id).onSnapshot((snapshot) => 
-            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data()})))
-        );*/
         fetchPosts()
         }
 
@@ -27,7 +24,6 @@ function GifPosts() {
 
     async function fetchPosts() {
         const res = await axios.get(`/api/others/posts/${user.id}`)
-        console.log(res.data)
         setPosts(res.data.data)
     }
    

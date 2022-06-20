@@ -14,9 +14,6 @@ function Feed() {
         let isMounted = true;
         
         if (isMounted) {
-            /*db.collection("posts").orderBy('timestamp', 'desc').onSnapshot((snapshot) => 
-            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data()})))
-            );*/
             fetchPosts()
         }
 
@@ -27,7 +24,6 @@ function Feed() {
     
     async function fetchPosts() {
         const res = await axios.get('/api/posts')
-        console.log(res.data)
         setPosts(res.data.data)
     }
 

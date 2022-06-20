@@ -14,9 +14,6 @@ function MyPosts() {
         let isMounted = true;
         
         if (isMounted) {
-           /* db.collection("posts").where("userId", "==", user.id).orderBy('timestamp', 'desc').onSnapshot((snapshot) => 
-            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data()})))
-        );*/
         fetchPosts()
         }
         
@@ -27,7 +24,6 @@ function MyPosts() {
    
     async function fetchPosts() {
         const res = await axios.get(`/api/your/posts/${user.id}`, {  params: {id: user.id}  })
-        console.log(res.data)
         setPosts(res.data.data)
     }
 

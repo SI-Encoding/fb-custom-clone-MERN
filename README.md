@@ -1,8 +1,8 @@
-# fb-custom-clone
+# fb-custom-clone-MERN
 
 ---
 
-This a single page application created using React.js library to create the user interface, and interacts with and stores data using Firebase services.
+This a single page application created using MERN stack (MongoDb, Express.js, React.js, and Node.js) library to create the user interface,and uses Node.js as the backend, which interacts with and stores data using MongoDb.
 The purpose of this application is to demonstrate CRUD functionalities mimicking common Facebook features.
 
 # Instructions to SETUP and RUN
